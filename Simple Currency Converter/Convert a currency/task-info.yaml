@@ -1,0 +1,22 @@
+type: remote_edu
+files:
+- name: main.js
+  visible: true
+  text: |-
+    console.log(`Welcome to Currency Converter!
+    1 USD equals  1 USD
+    1 USD equals  113.5 JPY
+    1 USD equals  0.89 EUR
+    1 USD equals  74.36 RUB
+    1 USD equals  0.75 GBP`);
+  learner_created: false
+- name: tests.py
+  visible: false
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17898#comment
+check_profile: hyperskill_node_javascript
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 12 May 2022 09:14:18 UTC
+record: 1

@@ -1,0 +1,59 @@
+type: remote_edu
+custom_name: Loop it!
+files:
+- name: main.js
+  visible: true
+  text: |-
+    const input = require('sync-input');
+    let arrOfCurrency = ["USD", "JPY", "EUR", "RUB", "GBP"];
+    console.log(`Welcome to Currency Converter!
+    1 USD equals  1 USD
+    1 USD equals  113.5 JPY
+    1 USD equals  0.89 EUR
+    1 USD equals  74.36 RUB
+    1 USD equals  0.75 GBP`);
+    console.log(`I can convert USD to these currencies: JPY, EUR, RUB, USD, GBP
+    Type the currency you wish to convert: USD`);
+    let currency = input("To: ");
+    if(!arrOfCurrency.includes(currency)){
+        console.log("Unknown currency");
+    } else {
+        let amount = input("Amount: ");
+        if (Number(amount) !== +amount) {
+            console.log("The amount has to be a number")
+        } else {
+            if (amount < 0) {
+                console.log(`The amount can not be less than 1`);
+            } else (arrOfCurrency.includes(currency))
+            {
+                switch (currency) {
+                    case "USD":
+                        console.log(`Result: ${amount} USD equals ${(amount * 1.0000).toFixed(4)} USD`);
+                        break;
+                    case "JPY":
+                        console.log(`Result: ${amount} USD equals ${(amount * 113.5).toFixed(4)} JPY`);
+                        break;
+                    case "EUR":
+                        console.log(`Result: ${amount} USD equals ${(amount * 0.89).toFixed(4)} EUR`);
+                        break;
+                    case "RUB":
+                        console.log(`Result: ${amount} USD equals ${(amount * 74.36).toFixed(4)} RUB`);
+                        break;
+                    case "GBP":
+                        console.log(`Result: ${amount} USD equals ${(amount * 0.75).toFixed(4)} GBP`);
+                        break;
+                }
+            }
+        }
+    }
+  learner_created: false
+- name: tests.py
+  visible: false
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17900#comment
+check_profile: hyperskill_node_javascript
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 12 May 2022 10:02:41 UTC
+record: -1
